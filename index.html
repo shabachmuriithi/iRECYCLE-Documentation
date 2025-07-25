@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iRECYCLE App Documentation</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <h1>iRECYCLE App Documentation</h1>
+   </header>
+
+    <nav>
+  <p>
+    Welcome to iRECYCLE app documentation. This is an app that helps second-hand clothes traders to recycle textile waste by connecting them to recycling companies.
+  </p>
+
+ 
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#user-guide">User Guide</a></li>
+      <li><a href="#agent-guide">Agent Guide</a></li>
+      <li><a href="#developer-guide">Developer Guide</a></li>
+      <li><a href="#architecture">System Architecture</a></li>
+      <li><a href="#design">Design</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </nav>
+
+
+<section class="toc">
+  <h2>Table of Contents</h2>
+  <ul>
+    <li><a href="#user-guide">User Guide</a></li>
+    <li><a href="#agent-guide">Agent Guide</a></li>
+    <li><a href="#developer-guide">Developer Guide</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+</section>
+
+<section id="overview">
+  <h2>Overview</h2>
+  <p>
+    The iRECYCLE app facilitates recycling of textile waste in Kenya, targeting second-hand clothes traders within Nairobi and its environs. The goal of this application is to contribute to environmental sustainability, especially by reducing the waste that ends up at the Dandora dumpsite from unsold second-hand clothes.
+  </p>
+</section>
+
+<section id="impact" style="position:relative; overflow:hidden;">
+  <img src="assets/trashion-hero.svg"
+       alt="People recycling textiles" style="float:right;width:220px;max-width:70vw; margin-left:24px;">
+  <h2>Why Trashion Management Matters</h2>
+  <p>
+    Textile waste in Nairobi's markets piles up fast, contributing heavily to dumpsites like Dandora. Through iRECYCLE, traders and agents turn unsold clothes into valuable recycled materials, protecting our local environment.
+  </p>
+</section>
+
+
+<section id="user-guide">
+  <h2>User Guide</h2>
+  <h3>For Traders: Getting Started</h3>
+  <ol>
+    <li>
+      <b>Download the app</b>: The app will be available for download to select traders for testing via a provided link.
+    </li>
+    <li>
+      <b>Create an account</b>: Open the app and click "Sign Up." Enter your name, phone number, location, and password. Click 'Sign Up' to create your account. If you already have an account, log in with your phone number and password.
+    </li>
+    <li>
+      <b>Request a pickup</b>: On the home page, tap on "New Pickup Request." Fill in the type of textile, estimated weight, and upload a photo. Tap "Submit." You will receive a notification once pickup is scheduled.
+    </li>
+    <li>
+      <b>View price catalogue</b>: Access the price catalogue screen to see types of materials and current price per kilogram.
+    </li>
+    <li>
+      <b>View pickup history</b>: Track past and pending pickups, including date, weight, status, and type of textile.
+    </li>
+    <li>
+      <b>Track payment history</b>: View date, amount, and status of your payments.
+    </li>
+    <li>
+      <b>Manage your profile</b>: Update your name, phone number, and current market as needed.
+    </li>
+  </ol>
+  <p>
+    <a class="external-link" href="https://github.com/shabachmuriithi/iRECYCLE-Documentation/blob/main/doc/trader-user-guide.md#irecycle-user-guide" target="_blank">Read the full Trader User Guide</a>
+  </p>
+</section>
+
+<section id="agent-guide">
+  <h2>Agent Guide</h2>
+  <ol>
+    <li>
+      <b>Download the app</b>: Download link provided.
+    </li>
+    <li>
+      <b>Create an account and log in</b>: Enter your details and sign up. Log in using your phone number and password.
+    </li>
+    <li>
+      <b>View collections</b>: On the home page, see pending pickups for your assigned markets; view pickup details and map location for navigation.
+    </li>
+    <li>
+      <b>Price catalogue</b>: Reference buying rates for different materials.
+    </li>
+    <li>
+      <b>Request payment</b>: Request payment after a pickup by entering the trader's phone number and sending a payment request.
+    </li>
+    <li>
+      <b>Pickup history</b>: Track all collections in your assigned market with date, type, weight, and trader's name.
+    </li>
+  </ol>
+  <p>
+    <a class="external-link" href="https://github.com/shabachmuriithi/iRECYCLE-Documentation/blob/main/doc/agent-user-guide.md" target="_blank">Read the full Agent User Guide</a>
+  </p>
+</section>
+
+<section id="developer-guide">
+  <h2>Developer Guide</h2>
+  <h3>System Requirements</h3>
+  <ul>
+    <li>Hardware: 8GB RAM minimum</li>
+    <li>Software: Android Studio 2022.3+, npm, Python 3.8+, Django 4.2+, Django REST Framework 3.14+, PostgreSQL 13+, Postman</li>
+    <li>Dependencies:
+      <ul>
+        <li>Python: <code>pip install django djangorestframework</code></li>
+        <li>JavaScript: <code>npm install</code></li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Project Setup</h3>
+  <ol>
+    <li>
+      <b>Android App:</b> Clone repo, open in Android Studio, configure emulator, sync Gradle, and build project.
+    </li>
+    <li>
+      <b>React Dashboard:</b> Clone repo, install dependencies, and run development server on <code>http://localhost:3000</code>.
+    </li>
+    <li>
+      <b>Django Backend:</b> Clone repo, create & activate virtualenv, install requirements, apply migrations, and run server on <code>http://localhost:8000</code>.
+    </li>
+  </ol>
+
+  <h3>API Integration</h3>
+  <ul>
+    <li>Manage traders: <code>/api/traders/</code></li>
+    <li>Manage agents: <code>/api/agents/</code></li>
+    <li>Manage companies: <code>/api/companies/</code></li>
+    <li>Unified user creation: <code>/api/user-union/</code></li>
+    <li>Payments: <code>/api/payments/</code></li>
+    <li>Initiate M-Pesa payment: <code>/api/stk-push/</code></li>
+    <li>Daraja API: <code>/api/daraja/</code></li>
+    <li>Fabric catalogue: <code>/api/catalogue/</code></li>
+    <li>Collections: <code>/api/collections/</code></li>
+    <li>Clothes listings: <code>/api/clothes-listings/</code></li>
+    <li>Market locations: <code>/api/markets/</code></li>
+  </ul>
+  <h4>M-Pesa Integration (Daraja)</h4>
+  <pre>
+Payload (STK Push):
+{
+  "phone_number": "254712345678",
+  "amount": "1000.00",
+  "order_item": ["Textile Waste"],
+  "account_reference": "TX12345",
+  "transaction_desc": "Payment for pickup"
+}
+  </pre>
+  <p>Use OAuth 2.0 credentials from Safaricom for authentication.</p>
+
+  <h3>Testing</h3>
+  <ul>
+    <li>Test API endpoints using Postman (GET /api/traders/, POST /api/stk-push/)</li>
+    <li>Write backend tests for Django using PyTest</li>
+  </ul>
+  <p>
+    <a class="external-link" href="https://docs.google.com/document/d/1bcdWX7MPsCrWhO6Ua1PQ2u7DPfSeT-YdG-hHcHaKzIs/edit?usp=sharing" target="_blank">Full PRD (Google Doc)</a>
+  </p>
+</section>
+
+<section id="architecture">
+  <h2>System Architecture</h2>
+  <p>
+    View the detailed system architecture and data flow diagram:<br>
+    <a class="external-link" href="https://lucid.app/lucidspark/8ada8c12-b729-4b17-ad79-1c475bdb8d28/edit?invitationId=inv_dc0adaa1-76d4-48ab-8195-a2a087eba72f&referringApp=slack&page=0_0#" target="_blank">System Architecture Diagram (Lucidchart)</a>
+  </p>
+</section>
+
+<section id="design">
+  <h2>Design</h2>
+  <p>
+    Explore the Figma designs for layout, color, and component reference:<br>
+    <a class="external-link" href="https://www.figma.com/design/p3MnsySDBj7JQ7nZ2wubPR/Mockup-wireframe?node-id=137-2&p=f&t=KyyqIfTmF7ZFWdGo-0" target="_blank">View Figma Mockups</a>
+  </p>
+</section>
+
+<section id="faq">
+  <h2>Frequently Asked Questions (FAQ)</h2>
+  <dl>
+    <dt>Who can use iRECYCLE?</dt>
+    <dd>Second-hand clothes traders in Nairobi and agents working with recycling companies.</dd>
+    <dt>How do I get paid for my textile waste?</dt>
+    <dd>Payments are processed via M-Pesa after successful pickup and verification.</dd>
+    <dt>How do I update my trader profile?</dt>
+    <dd>Go to "Manage profile" within the app and edit your details.</dd>
+    <dt>Where can I find more detailed developer documentation?</dt>
+    <dd>Check the <a class="external-link" href="#developer-guide">Developer Guide</a> above and the <a class="external-link" href="https://docs.google.com/document/d/1bcdWX7MPsCrWhO6Ua1PQ2u7DPfSeT-YdG-hHcHaKzIs/edit?usp=sharing" target="_blank">full PRD</a>.</dd>
+  </dl>
+</section>
+
+<footer>
+  <p>© 2025 iRECYCLE Project Team &middot; For feedback: <a href="mailto:info@irecycle.co.ke">info@irecycle.co.ke</a></p>
+</footer>
+
+</body>
+</html>
