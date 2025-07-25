@@ -1,0 +1,153 @@
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1.1rem;
+    margin: 0;
+    color: #222;
+    background: #fafafa;
+    line-height: 1.6;
+}
+
+header {
+    background-image: url(images/image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+    text-align: center;
+    padding-top: 70px;
+    font-size: 24px;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    bottom: -160px;
+    right: -120px;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, #F5DCFC 55%, transparent 99%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+header,
+nav,
+section,
+footer {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #147864;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #147864;
+    color: #fff;
+    outline: none;
+}
+
+
+h1,
+h2 {
+    color: #147864;
+    margin-bottom: 0.5em;
+}
+
+
+section {
+    margin-bottom: 32px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(146, 199, 150, 0.15);
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 4px 12px rgba(146, 199, 150, 0.25);
+}
+
+
+.toc ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.toc li {
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+
+
+code,
+pre {
+    background: #eee;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.9em;
+}
+
+
+.external-link {
+    color: #1a73e8;
+    text-decoration: underline;
+}
+
+.external-link:hover {
+    color: #0046b8;
+}
+
+
+footer {
+    text-align: center;
+    color: #888;
+    font-size: 0.9em;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+}
+
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header,
+    nav,
+    section,
+    footer {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+}
